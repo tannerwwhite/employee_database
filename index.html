@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Employee Data Management</title>
+    <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <!-- employee tracker -->
+    <div class="container">
+        <!-- jumbotron heading -->
+        <div class="jumbotron">
+            <h1 class="text-center">Employee Data Management</h1>
+            <h3 class="text-center">A Comprehensive Directory of Employee Billable Hours</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- table for employee data -->
+                <div class="panel panel-default">
+                    <div class="panel panel-heading">
+                        <h3 class="panel-title"><strong>Current Employees</strong></h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table" id="table">
+                            <thead>
+                                <tr>
+                                    <th>Employee Name</th>
+                                    <th>Employee Role</th>
+                                    <th>Start Date</th>
+                                    <th>Months Worked</th>
+                                    <th>Monthly Rate ($)</th>
+                                    <th>Total Pay ($)</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel panel-heading">
+                        <h3 class="panel-title">Add Employee</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="name" class="form-control" id="name" placeholder="Enter Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="start">Start Date</label>
+                                <input type="start" class="form-control" id="start" placeholder="Enter date DD/MM/YY">
+                            </div>
+                            <div class="form-group">
+                                <label for="role">Role</label>
+                                <input type="role" class="form-control" id="role" placeholder="Enter Role">
+                            </div>
+                            <div class="form-group">
+                                <label for="rate">Monthly Rate ($)</label>
+                                <input type="rate" class="form-control" id="rate" placeholder="Enter rate ($)">
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./logic.js"></script>
+</body>
+
+</html>
